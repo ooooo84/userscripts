@@ -174,6 +174,9 @@ function TimerPlay() {
       polyV.j2s_seekVideo(playTime);
       SaveLearningTime(0, playTime, playTotalTime);
       firstRun = false;
+    } else if (number >= 10) {
+      SaveLearningTime(1, playTotalTime - 9, playTotalTime);
+      UpdatePlayTime($("#HdPlayLogId").val(), playTotalTime, 1);
     }
     //如果播放时长小于视频总时长，更新播放时长
     if (playTime + 10 >= playTotalTime) {
