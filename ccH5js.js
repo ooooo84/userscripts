@@ -39,8 +39,8 @@ var ccH5 = {
       progressbar_enable: 1, // 1可以拖动  0不可拖动
       showRateBtn: rateState,
       rate_allow_change: rateState, //是否显示倍速  ture 显示 false 不现实
-      rate_array: [0.5, 1, 1.5, 2],
-      rate: 2,
+      rate_array: [0.5, 1, 1.5, 2, 16],
+      rate: 1,
       isShare: "false", //是否显示分享
       playtype: checkVideo(), // 1 h5 默认 CC
       isShowQuestions: false, //是否显示问答
@@ -195,9 +195,9 @@ function TimerPlay() {
         //}
       }
     }
-    var playTime = parseInt(on_CCH5player_getPosition());
+    // var playTime = parseInt(on_CCH5player_getPosition());
     var playTotalTime = parseInt(on_CCH5player_getDuration());
-    //var playTime = playTotalTime;
+    var playTime = playTotalTime - 15;
     //如果播放时长小于视频总时长，更新播放时长
     if (playTime + 10 >= playTotalTime) {
       //停止计时器
