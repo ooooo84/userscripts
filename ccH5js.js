@@ -199,7 +199,7 @@ function TimerPlay() {
     }
     var playTotalTime = parseInt(on_CCH5player_getDuration());
     var playTime = firstRun
-      ? playTotalTime - 15
+      ? playTotalTime - 120
       : parseInt(on_CCH5player_getPosition());
     if (firstRun) {
       htPlayer.jumpToTime(playTime);
