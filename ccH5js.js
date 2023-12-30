@@ -46,7 +46,7 @@ var ccH5 = {
       isShowQuestions: false, //是否显示问答
       parentNode: objId,
       closeHistoryTime: 1,
-      banDrag: true,
+      banDrag: false,
       //,
       //signConfig: {
       //seconds: second, // 签到时间点，支持设置1-5个时间点
@@ -195,9 +195,9 @@ function TimerPlay() {
         //}
       }
     }
-    // var playTime = parseInt(on_CCH5player_getPosition());
+    var playTime = parseInt(on_CCH5player_getPosition());
     var playTotalTime = parseInt(on_CCH5player_getDuration());
-    var playTime = playTotalTime - 15;
+    //var playTime = playTotalTime - 15;
     //如果播放时长小于视频总时长，更新播放时长
     if (playTime + 10 >= playTotalTime) {
       //停止计时器
