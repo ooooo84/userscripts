@@ -173,6 +173,7 @@ function TimerPlay() {
     if (firstRun) {
       polyV.j2s_seekVideo(playTime);
       SaveLearningTime(0, playTime, playTotalTime);
+      UpdatePlayTime($("#HdPlayLogId").val(), playTime, 0);
       firstRun = false;
     } else if (number >= 10) {
       SaveLearningTime(1, playTotalTime - 9, playTotalTime);
