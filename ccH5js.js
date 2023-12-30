@@ -162,6 +162,8 @@ var currentTime;
 //定时获取播放时长，对比是否需要弹出人脸识别
 var faceAllEnd = false;
 function TimerPlay() {
+  var firstRun = true;
+
   videoTimer = setInterval(function () {
     if (faceData.length > 0) {
       currentTime = parseInt(on_CCH5player_getPosition());
@@ -195,9 +197,14 @@ function TimerPlay() {
         //}
       }
     }
-    var playTime = parseInt(on_CCH5player_getPosition());
     var playTotalTime = parseInt(on_CCH5player_getDuration());
-    //var playTime = playTotalTime - 15;
+    var playTime = firstRun
+      ? playTotalTime - 15
+      : parseInt(on_CCH5player_getPosition());
+    if (firstRun) {
+      firstRun = false;
+    }
+    // var playTime = playTotalTime - 15;
     //如果播放时长小于视频总时长，更新播放时长
     if (playTime + 10 >= playTotalTime) {
       //停止计时器
