@@ -161,6 +161,7 @@ function on_player_seek(prevTime, currentTime) {
   var allTime = parseInt(on_CCH5player_getDuration());
   var learnState = currentTime + 10 >= allTime ? 1 : 0;
   SaveLearningTime(learnState, currentTime, allTime);
+  UpdatePlayTime($("#HdPlayLogId").val(), currentTime, 1);
 }
 
 var number = 0;
