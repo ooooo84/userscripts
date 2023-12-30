@@ -157,6 +157,12 @@ function on_CCH5player_ready(obj) {
   TimerPlay();
 }
 
+function on_player_seek(prevTime, currentTime) {
+  var allTime = parseInt(on_CCH5player_getDuration());
+  var learnState = currentTime + 10 >= allTime ? 1 : 0;
+  SaveLearningTime(learnState, currentTime, allTime);
+}
+
 var number = 0;
 var currentTime;
 //定时获取播放时长，对比是否需要弹出人脸识别
