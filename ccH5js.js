@@ -202,6 +202,8 @@ function TimerPlay() {
       ? playTotalTime - 15
       : parseInt(on_CCH5player_getPosition());
     if (firstRun) {
+      htPlayer.jumpToTime(playTime);
+      SaveLearningTime(0, playTime, playTotalTime);
       firstRun = false;
     }
     // var playTime = playTotalTime - 15;
