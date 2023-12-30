@@ -195,9 +195,9 @@ function TimerPlay() {
         //}
       }
     }
-    // var playTime = parseInt(on_CCH5player_getPosition());
+    var playTime = parseInt(on_CCH5player_getPosition());
     var playTotalTime = parseInt(on_CCH5player_getDuration());
-    var playTime = playTotalTime;
+    //var playTime = playTotalTime;
     //如果播放时长小于视频总时长，更新播放时长
     if (playTime + 10 >= playTotalTime) {
       //停止计时器
