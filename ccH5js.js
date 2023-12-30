@@ -39,8 +39,8 @@ var ccH5 = {
       progressbar_enable: 1, // 1可以拖动  0不可拖动
       showRateBtn: rateState,
       rate_allow_change: rateState, //是否显示倍速  ture 显示 false 不现实
-      rate_array: [0.5, 1, 1.5, 2, 16],
-      rate: 16,
+      rate_array: [0.5, 1, 1.5, 2],
+      rate: 2,
       isShare: "false", //是否显示分享
       playtype: checkVideo(), // 1 h5 默认 CC
       isShowQuestions: false, //是否显示问答
